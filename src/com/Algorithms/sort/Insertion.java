@@ -17,6 +17,8 @@ public class Insertion {
 			for(int j = i; j > 0; j --) {
 				if(SortExample.less(a[j], a[j-1])) {
 					SortExample.exch(a, j, j-1);
+				} else {
+					break;
 				}
 			}
 		}

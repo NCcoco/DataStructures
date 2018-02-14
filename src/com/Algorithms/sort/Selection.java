@@ -33,9 +33,8 @@ public class Selection {
 			intArray1[i] = integer;
 			intArray2[i] = integer;
 		}
-//		Insertion.sort(intArray1);
-//		Selection.sort(intArray2);
-		Selection s = new Selection();
+		Insertion.sort(intArray1);
+		Selection.sort(intArray2);
 //		SortExample.show(intArray);
 	}
 }
