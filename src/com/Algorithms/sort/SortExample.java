@@ -1,7 +1,7 @@
 package com.Algorithms.sort;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * SortExample
@@ -10,12 +10,6 @@ import java.util.Set;
  * @author NC
  */
 public class SortExample {
-	
-	public static <T extends Comparable<T>> void sort(T[] a) {
-		
-	}
-	
-	
 	/**
 	 * @description : v小于w 返回 true v大于w返回false
 	 * @param v
@@ -49,10 +43,22 @@ public class SortExample {
 	}
 	
 	public static void main(String[] args) {
-		Set<Integer> intSet = new HashSet<>(100);
-		for(int i = 0; i < intSet.size(); i ++) {
-			intSet.add( (Integer) ((int) (Math.random() * 100 )));
+		List<Integer[]> list = new ArrayList<>();
+		int num = 3;
+		
+		for(int i = 0; i < num; i ++) {
+			list.add(new Integer[10000]);
 		}
-		// 就少一个排序算法了
+		for(int i = 0; i < list.get(0).length; i ++) {
+			Double d = Double.valueOf(Math.random() * 10000000);
+			Integer integer = d.intValue();
+			for(int j = 0; j < num; j ++) {
+				list.get(j)[i] = integer;
+			}
+		}
+		int index = 0;
+		Insertion.sort(list.get(index++));
+		Selection.sort(list.get(index++));
+		Shell.sort(list.get(index++));
 	}
 }

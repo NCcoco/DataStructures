@@ -24,17 +24,4 @@ public class Selection {
 		Long over = System.currentTimeMillis();
 		System.out.println("选择排序花费了：" + (over - start) + "毫秒");
 	}
-	public static void main(String[] args) {
-		Integer[] intArray1 = new Integer[10000];
-		Integer[] intArray2 = new Integer[10000];
-		for(int i = 0; i < intArray1.length; i ++) {
-			Double d = Double.valueOf(Math.random() * 10000000);
-			Integer integer = d.intValue();
-			intArray1[i] = integer;
-			intArray2[i] = integer;
-		}
-		Insertion.sort(intArray1);
-		Selection.sort(intArray2);
-//		SortExample.show(intArray);
-	}
 }
