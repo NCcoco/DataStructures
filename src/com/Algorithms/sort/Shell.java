@@ -17,8 +17,8 @@ public class Shell {
 		while(h >= 1) {
 			for(int i = h; i < N; i ++) {
 				for(int j = i; j >= h; j -= h) {
-					if(SortExample.less(a[j], a[j-h])) {
-						SortExample.exch(a, j, j-h);
+					if(SortUtils.less(a[j], a[j-h])) {
+						SortUtils.exch(a, j, j-h);
 					} else {
 						break;
 					}

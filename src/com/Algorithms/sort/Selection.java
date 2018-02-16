@@ -16,8 +16,8 @@ public class Selection {
 		Long start = System.currentTimeMillis();
 		for(int i = 0; i < a.length; i ++) {
 			for(int j = i + 1; j < a.length; j ++) {
-				if(SortExample.less(a[j], a[i])) {
-					SortExample.exch(a, i, j);
+				if(SortUtils.less(a[j], a[i])) {
+					SortUtils.exch(a, i, j);
 				}
 			}
 		}
